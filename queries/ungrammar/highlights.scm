@@ -5,12 +5,19 @@
 
 (token_ident) @string
 
-(ident) @variable
+(node 
+  name: (ident) @variable)
 
-[
-  (modifier)
-  "="
-] @operator
+(seq_rule
+  (ident) @field)
+
+(labeled
+  label: (ident) @namespace
+  (ident) @field)
+
+"?" @conditional
+
+"*" @repeat
 
 (comment) @comment
 
