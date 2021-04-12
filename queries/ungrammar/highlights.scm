@@ -6,14 +6,14 @@
 (token_ident) @string
 
 (node 
-  name: (ident) @variable)
+  name: (ident) @symbol)
 
 (seq_rule
-  (ident) @field)
+  (ident) @type)
 
 (labeled
-  label: (ident) @namespace
-  (ident) @field)
+  label: (ident) @label
+  (ident) @type)
 
 "?" @conditional
 
